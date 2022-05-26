@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{# Services template#}
+{% block content %}
+<div class="row p-5">
+{% for service in services %}
+ <div class="col-lg-4 col-md-12 d-flex justify-content-around mt-5">
+   <div class="card w-75">
+      <div class="card-body">
+        <h5 class="card-title">{{ service.service_name }}</h5>
+        <p class="card-text">{{ service.service_details }}</p>
+        <a href="{% url 'contact:contact' %}" class="btn btn-info">Get A Quote</a>
+      </div>
+   </div>
+ </div>
+{% endfor %}
+ </div>
+{%  endblock %}
