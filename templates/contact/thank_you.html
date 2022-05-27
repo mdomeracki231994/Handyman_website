@@ -1,1 +1,9 @@
-Thank you page.
+{% extends 'base.html' %}
+    {% block content %}
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static '/css/contact_css/site.css' %}">
+        <div class="container">
+        <h4 class="text-center">Thank you for reaching out! We look forward to speaking with you!</h4>
+            <img class="background_image" src="{% static 'imgs/tool-2820950_1280.jpeg'%}" alt="background image">
+        </div>
+    {% endblock %}
